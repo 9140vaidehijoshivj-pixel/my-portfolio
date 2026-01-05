@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaidehi Joshi Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <div class="left">Vaidehi's Portfolio</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section class="firstSection" id="home">
+        <div class="leftSection">
+            Hi, My Name is <span style="color:violet;">Vaidehi</span> <br>
+            and I am <span class="typing"></span> <br>
+
+            <!-- Resume Button (WORKS WHEN resume.pdf EXIST) -->
+            <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+        </div>
+
+        <div class="rightSection">
+            <div class="depth-scene">
+                <div class="depth-card">
+                    <img src="photo.png" alt="Profile">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <div class="about-container">
+
+            <div class="about-img-wrapper">
+                <img src="about-photo.png" alt="About Photo">
+            </div>
+
+            <div class="about-card">
+                <h2>About Me</h2>
+                <p>I am a Computer Science student passionate about Web Development & AI.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <!-- SERVICES -->
+    <section id="services" class="services">
+        <div class="service-card">
+            <img src="web.png">
+            <h3>Web Development</h3>
+        </div>
+
+        <div class="service-card">
+            <img src="ui.png">
+            <h3>UI/UX Design</h3>
+        </div>
+
+        <div class="service-card">
+            <img src="ai.png">
+            <h3>AI Projects</h3>
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section class="projects">
+        <h2>Projects</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="project1.jpg">
+                <h3>Weather App</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+
+            <div class="project-card">
+                <img src="project2.jpg">
+                <h3>Portfolio Website</h3>
+                <p>Responsive & Animated</p>
+            </div>
+
+            <div class="project-card">
+                <img src="project3.jpg">
+                <h3>AI Mini Project</h3>
+                <p>Python & ML</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="html.png" alt="HTML">
+                <p>HTML</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="css.png" alt="CSS">
+                <p>CSS</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="js.png" alt="JavaScript">
+                <p>JavaScript</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="python.png" alt="Python">
+                <p>Python</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="react.png" alt="React">
+                <p>React</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="git.jpg" alt="Git">
+                <p>Git</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="certificates">
+        <h2>Certificates</h2>
+
+        <div class="cert-grid">
+            <div class="cert-card">
+                <img src="cert1.jpg" alt="Certificate 1">
+                <p>Web Development Certificate</p>
+            </div>
+
+            <div class="cert-card">
+                <img src="cert2.jpg" alt="Certificate 2">
+                <p>Python Programming</p>
+            </div>
+
+            <div class="cert-card">
+                <img src="cert3.jpg" alt="Certificate 3">
+                <p>AI & ML Basics</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button>Send Message</button>
+        </form>
+    </section>
+
+
+
+    <script src="script.js"></script>
+
+    <script>
+        const tiltElements = document.querySelectorAll(".tilt");
+
+        tiltElements.forEach(el => {
+            const img = el.querySelector("img");
+
+            el.addEventListener("mousemove", (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const rotateX = ((y / rect.height) - 0.5) * -20;
+                const rotateY = ((x / rect.width) - 0.5) * 20;
+
+                img.style.transform = `
+                rotateX(${rotateX}deg)
+                rotateY(${rotateY}deg)
+                translateZ(60px)
+                scale(1.05)
+            `;
+            });
+
+            el.addEventListener("mouseleave", () => {
+                img.style.transform = `
+                    rotateX(0deg)
+                    rotateY(0deg)
+                    translateZ(60px)
+                    scale(1)
+                `;
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
