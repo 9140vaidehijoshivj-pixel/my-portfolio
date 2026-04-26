@@ -5,15 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaidehi Joshi Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- NAVIGATION BAR -->
+    <!-- NAVBAR -->
     <nav>
         <div class="left">Vaidehi's Portfolio</div>
         <ul>
@@ -27,197 +38,136 @@
         </ul>
     </nav>
 
-    <!-- HOME SECTION -->
+    <!-- HOME -->
     <section class="firstSection" id="home">
-        <div class="leftSection">
+        <div class="leftSection" data-aos="fade-right">
             Hi, My Name is <span style="color:violet;">Vaidehi</span> <br>
-            and I am <span class="typing"></span> <br>
-
-            <!-- Resume Button (WORKS WHEN resume.pdf EXIST) -->
+            and I am <span class="typing"></span><br>
             <a href="resume.pdf" download class="resume-btn">Download Resume</a>
         </div>
 
-        <div class="rightSection">
+        <div class="rightSection" data-aos="fade-left">
             <div class="depth-scene">
-                <div class="depth-card">
+                <div class="depth-card tilt">
                     <img src="photo.png" alt="Profile">
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="about">
         <div class="about-container">
-
-            <div class="about-img-wrapper">
-                <img src="about-photo.png" alt="About Photo">
+            <div class="about-img-wrapper tilt" data-aos="zoom-in">
+                <img src="about-photo.png">
             </div>
 
-            <div class="about-card">
+            <div class="about-card" data-aos="fade-up">
                 <h2>About Me</h2>
                 <p>I am a Computer Science student passionate about Web Development & AI.</p>
             </div>
-
         </div>
     </section>
 
     <!-- SERVICES -->
-    <!-- SERVICES -->
     <section id="services" class="services">
-        <div class="service-card">
+        <div class="service-card" data-aos="fade-up">
             <img src="web.png">
             <h3>Web Development</h3>
         </div>
-
-        <div class="service-card">
+        <div class="service-card" data-aos="fade-up">
             <img src="ui.png">
             <h3>UI/UX Design</h3>
         </div>
-
-        <div class="service-card">
+        <div class="service-card" data-aos="fade-up">
             <img src="ai.png">
             <h3>AI Projects</h3>
         </div>
     </section>
 
-
     <!-- PROJECTS -->
-    <section class="projects">
+    <section id="projects" class="projects">
         <h2>Projects</h2>
-
         <div class="projects-grid">
-            <div class="project-card">
-                <img src="project1.jpg">
+            <div class="project-card tilt" data-aos="zoom-in">
+                <img src="weather.png">
                 <h3>Weather App</h3>
-                <p>HTML, CSS, JavaScript</p>
+                <p>HTML, CSS, JS</p>
             </div>
 
-            <div class="project-card">
-                <img src="project2.jpg">
-                <h3>Portfolio Website</h3>
-                <p>Responsive & Animated</p>
+            <div class="project-card tilt" data-aos="zoom-in">
+                <img src="portfolio.png">
+                <h3>Portfolio</h3>
+                <p>Responsive</p>
             </div>
 
-            <div class="project-card">
-                <img src="project3.jpg">
-                <h3>AI Mini Project</h3>
-                <p>Python & ML</p>
+            <div class="project-card tilt" data-aos="zoom-in">
+                <img src="AI_project.png">
+                <h3>AI Project</h3>
+                <p>Python</p>
             </div>
         </div>
     </section>
 
-
-
+    <!-- SKILLS -->
     <section id="skills" class="skills">
         <h2>Skills</h2>
-
         <div class="skills-grid">
-            <div class="skill-card">
-                <img src="html.png" alt="HTML">
+            <div class="skill-card" data-aos="flip-left"><img src="html.png">
                 <p>HTML</p>
             </div>
-
-            <div class="skill-card">
-                <img src="css.png" alt="CSS">
+            <div class="skill-card" data-aos="flip-left"><img src="css.png">
                 <p>CSS</p>
             </div>
-
-            <div class="skill-card">
-                <img src="js.png" alt="JavaScript">
-                <p>JavaScript</p>
+            <div class="skill-card" data-aos="flip-left"><img src="js.png">
+                <p>JS</p>
             </div>
-
-            <div class="skill-card">
-                <img src="python.png" alt="Python">
+            <div class="skill-card" data-aos="flip-left"><img src="python.png">
                 <p>Python</p>
             </div>
-
-            <div class="skill-card">
-                <img src="react.png" alt="React">
+            <div class="skill-card" data-aos="flip-left"><img src="react.png">
                 <p>React</p>
             </div>
-
-            <div class="skill-card">
-                <img src="git.jpg" alt="Git">
+            <div class="skill-card" data-aos="flip-left"><img src="git.jpg">
                 <p>Git</p>
             </div>
         </div>
     </section>
 
+    <!-- CERTIFICATES -->
     <section id="certificates" class="certificates">
         <h2>Certificates</h2>
-
         <div class="cert-grid">
-            <div class="cert-card">
-                <img src="web.png" alt="Certificate 1">
-                <p>AI for Web Development Certificate</p>
+            <div class="cert-card" data-aos="fade-up"><img src="web.png">
+                <p>AI Web Dev</p>
             </div>
-
-            <div class="cert-card">
-                <img src="Cloud.jpg" alt="Certificate 2">
-                <p>Cloud Computing Fundamentals – Basics for Beginners [2026]</p>
+            <div class="cert-card" data-aos="fade-up"><img src="Cloud.jpg">
+                <p>Cloud Computing</p>
             </div>
-
-            <div class="cert-card">
-                <img src="cyber.jpeg" alt="Certificate 3">
-                <p>Deloite</p>
+            <div class="cert-card" data-aos="fade-up"><img src="cyber.jpeg">
+                <p>Deloitte</p>
             </div>
         </div>
     </section>
 
-
     <!-- CONTACT -->
-    <section class="contact">
+    <section id="contact" class="contact" data-aos="fade-up">
         <h2>Contact Me</h2>
 
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button>Send Message</button>
+        <form class="contact-form" id="contactForm">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message"></textarea>
+            <button>Send</button>
         </form>
     </section>
 
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
 
-
+    <!-- JS -->
     <script src="script.js"></script>
-
-    <script>
-        const tiltElements = document.querySelectorAll(".tilt");
-
-        tiltElements.forEach(el => {
-            const img = el.querySelector("img");
-
-            el.addEventListener("mousemove", (e) => {
-                const rect = el.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                const rotateX = ((y / rect.height) - 0.5) * -20;
-                const rotateY = ((x / rect.width) - 0.5) * 20;
-
-                img.style.transform = `
-                rotateX(${rotateX}deg)
-                rotateY(${rotateY}deg)
-                translateZ(60px)
-                scale(1.05)
-            `;
-            });
-
-            el.addEventListener("mouseleave", () => {
-                img.style.transform = `
-                    rotateX(0deg)
-                    rotateY(0deg)
-                    translateZ(60px)
-                    scale(1)
-                `;
-            });
-        });
-    </script>
-
-
 
 </body>
 
